@@ -13,6 +13,14 @@ getClientKey().then(clientKey => {
                 // state.data;
                 // state.isValid;
                 makePayment(state.data);
+            },
+            paymentMethodsConfiguration: {
+                applepay: {
+                    configuration: {
+                        merchantName: "Zac 123",
+                        merchantId: '000000000202075'
+                    }
+                }
             }
         };
 
