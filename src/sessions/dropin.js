@@ -48,7 +48,8 @@ getClientKey().then(clientKey => {
                     const dropinComponent = checkout.create('dropin', {
                         onSelect: activeComponent => {
                             if (activeComponent.state && activeComponent.state.data) updateStateContainer(activeComponent.data); // Demo purposes only
-                        }
+                        },
+                        instantPaymentTypes: ['applepay']
                     }).mount('#dropin-container');
                 }
                 initiateCheckout()
