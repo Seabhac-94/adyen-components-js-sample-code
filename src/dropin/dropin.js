@@ -13,6 +13,12 @@ getClientKey().then(clientKey => {
                 // state.data;
                 // state.isValid;
                 makePayment(state.data);
+            },
+            onError: (error, component) => {
+                console.error(error.name, error.message, error.stack, component);
+            },
+            onCancel: (state, component) => {
+                console.log(state)
             }
         };
 
